@@ -3,6 +3,6 @@
     "http/": "https://deno.land/std@0.180.0/http/"
   },
   "tasks": {
-    "dev": "deno run --watch --allow-net server.ts"
+    "dev": "deno run --watch --allow-net src/server.ts"
   }
 }
