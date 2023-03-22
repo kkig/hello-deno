@@ -1,10 +1,10 @@
-// import {serveListener} from 'https://deno.land/std@0.180.0/http/mod.ts';
-import {serveListener} from 'http/mod.ts';
+// import {serveListener} from 'http/mod.ts';
+import {serveListener} from '../deps/dep.ts';
 
-const BINDING = 8080;
-const listner = Deno.listen({port: BINDING});
+const port = Number(Deno.env.get('PORT')) || 8080;
+const listner = Deno.listen({port: port});
 
-console.log(`Server listening on http://localhost:${BINDING}...`);
+console.log(`Server listening on http://localhost:${port}...`);
 
 function notFound(req: Request) {
   const header = req.headers;
