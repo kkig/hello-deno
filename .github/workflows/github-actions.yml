@@ -1,0 +1,3 @@
+name: Github Actions
+run-name: ${{ github.actor }} is testing out GitHub Actions
+on: [commit]

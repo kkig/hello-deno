@@ -1,0 +1,25 @@
+{
+  "containers": {
+    "web": {
+      "image": "",
+      "environment": {
+        "APP_ENV": "release"
+      },
+      "ports": {
+        "8080": "HTTP"
+      }
+    }
+  },
+  "publicEndpoint": {
+    "contaierName": "web",
+    "containerPort": 8080,
+    "healthCheck": {
+      "healthyThreshold": 2,
+      "unhealthyThrehold": 2,
+      "timeoutSeconds": 5,
+      "intervalSeconds": 5,
+      "path": "/",
+      "successCodes": "200-499"
+    }
+  }
+}
