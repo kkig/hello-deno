@@ -1,4 +1,5 @@
 name: Build and Deplpy to AWS Lightsail
+run-name: ${{ github.actor }} is testing out CI/CD pipeline
 
 on:
   push:
