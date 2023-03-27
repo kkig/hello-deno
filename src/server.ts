@@ -8,9 +8,9 @@ console.log(`Server listening on http://localhost:${port}...`);
 
 function notFound(req: Request) {
   const header = req.headers;
-  const body = `Ooops! No route found for ${header.get('method')} ${header.get(
-    'url'
-  )}. \nCurrent URL: ${req.url}`;
+  const body = `Connection established! \nOoops, no route found for ${header.get(
+    'method.'
+  )} ${header.get('url')}. \nCurrent URL: ${req.url}`;
 
   return new Response(body, {status: 404});
 }
@@ -18,7 +18,7 @@ function notFound(req: Request) {
 function found(req: Request) {
   const header = req.headers;
   const url = new URL(req.url);
-  const body = `Yay, connection established! Your user-agent is:\n${header.get(
+  const body = `hooray, connection established! Your user-agent is:\n${header.get(
     'user-agent' ?? 'Unknown'
   )}. \nCurrent location: ${req.url}. \nPath: ${url.pathname}`;
 
