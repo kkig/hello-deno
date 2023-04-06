@@ -49,7 +49,7 @@ jobs:
       - name: Push and Deploy
         run: |
           aws lightsail push-container-image \
-            --region ${{ env.AWS_REGION }}
+            --region ${{ env.AWS_REGION }} \
             --service-name ${{ env.AWS_LIGHTSAIL_SERVICE_NAME }} \
             --label ${{ env.LABEL }} \
             --image ${{ env.AWS_LIGHTSAIL_SERVICE_NAME }}:release
